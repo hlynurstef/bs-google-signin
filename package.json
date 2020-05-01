@@ -1,0 +1,29 @@
+{
+  "name": "@hlynurstef/bs-google-signin",
+  "version": "1.0.0",
+  "description": "@react-native-community/google-signin bindings for ReasonML",
+  "scripts": {
+    "clean": "bsb -clean-world",
+    "build": "bsb -clean-world -make-world",
+    "watch": "bsb -clean-world -make-world -w"
+  },
+  "repository": "https://github.com/hlynurstef/bs-google-signin.git",
+  "author": "hlynurstef",
+  "license": "MIT",
+  "keywords": [
+    "bs-google-signin",
+    "bucklescript",
+    "reasonml",
+    "reason"
+  ],
+  "devDependencies": {
+    "bs-platform": "^7.2.2",
+    "reason-react": "^0.7.0",
+    "reason-react-native": "^0.61.0"
+  },
+  "peerDependencies": {
+    "@react-native-community/google-signin": "^3.0.4",
+    "reason-react": "^0.7.0",
+    "reason-react-native": "^0.61.0"
+  }
+}
