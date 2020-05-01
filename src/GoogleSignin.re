@@ -108,7 +108,7 @@ external revokeAccess: unit => Js.Promise.t(unit) = "revokeAccess";
 external hasPlayServices: playServicesConfig => Js.Promise.t(unit) =
   "hasPlayServices";
 
-module GoogleSignInError = {
+module GoogleSigninError = {
   type t = {
     .
     "code": string,
@@ -137,7 +137,7 @@ type statusCode =
   | SignInRequired(string)
   | Error(string);
 
-external _exnToGoogleSigninError: Js.Promise.error => GoogleSignInError.t =
+external _exnToGoogleSigninError: Js.Promise.error => GoogleSigninError.t =
   "%identity";
 
 let exnToGoogleSigninError = exn => {
