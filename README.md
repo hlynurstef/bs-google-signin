@@ -34,25 +34,30 @@ GoogleSignin.configure(
 
 ```
 GoogleSignin.(
-  hasPlayServices(
-    playServicesConfig(~showPlayServicesUpdateDialog=true),
-  )
+  hasPlayServices(playServicesConfig(~showPlayServicesUpdateDialog=true))
   |> Js.Promise.then_(_ => signIn())
   |> Js.Promise.then_((userInfo: UserInfo.t) => {
-        Js.Console.log2("idToken:", userInfo->UserInfo.idToken);
-        Js.Console.log2(
-          "serverAuthCode:",
-          userInfo->UserInfo.serverAuthCode,
-        );
+       Js.Console.log2("idToken:", userInfo->UserInfo.idToken);
+       Js.Console.log2("serverAuthCode:", userInfo->UserInfo.serverAuthCode);
 
-        let user = userInfo->UserInfo.user;
-        Js.Console.log2("user.id:", user->User.id);
-        Js.Console.log2("user.name:", user->User.name);
-        Js.Console.log2("user.email:", user->User.email);
-        Js.Console.log2("user.photo:", user->User.photo);
-        Js.Console.log2("user.givenName:", user->User.givenName);
-        Js.Console.log2("user.familyName:", user->User.familyName);
-        Js.Promise.resolve(userInfo);
-      })
+       let user = userInfo->UserInfo.user;
+       Js.Console.log2("user.id:", user->User.id);
+       Js.Console.log2("user.name:", user->User.name);
+       Js.Console.log2("user.email:", user->User.email);
+       Js.Console.log2("user.photo:", user->User.photo);
+       Js.Console.log2("user.givenName:", user->User.givenName);
+       Js.Console.log2("user.familyName:", user->User.familyName);
+       Js.Promise.resolve();
+     })
+  |> Js.Promise.catch(exn =>
+       switch (exnToGoogleSigninError(exn)) {
+       | SignInCancelled(message)
+       | PlayServicesNotAvailable(message)
+       | InProgress(message)
+       | SignInRequired(message)
+       | GoogleSignin.Error(message) =>
+         Js.Promise.resolve(Js.Console.log2("GoogleSignin failed:", message))
+       }
+     )
 );
 ```
