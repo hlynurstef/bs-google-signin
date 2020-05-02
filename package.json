@@ -1,6 +1,6 @@
 {
   "name": "@hlynurstef/bs-google-signin",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "ReasonML bindings for @react-native-community/google-signin",
   "pre-commit": "lint:staged",
   "repository": "https://github.com/hlynurstef/bs-google-signin.git",
