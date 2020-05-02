@@ -1,6 +1,26 @@
-# bs-google-signin
+<p align="center">
+  <img alt="reason-ml" src="img/reason.png" width="300">
+  <img alt="google-signin-button" src="img/google-signin-button.png" width="300">
+</p>
 
-ReasonML bindings for [@react-native-community/google-signin](https://github.com/react-native-community/google-signin)
+<h1 align="center">
+  @hlynurstef/bs-google-signin
+</h1>
+
+<p align="center">
+  <a href="https://reasonml.github.io/">ReasonML</a> bindings for <a href="https://github.com/react-native-community/google-signin">@react-native-community/google-signin</a>
+</p>
+
+---
+
+<div align="center">
+
+![npm](https://img.shields.io/npm/v/@hlynurstef/bs-google-signin)
+![GitHub last commit](https://img.shields.io/github/last-commit/hlynurstef/bs-google-signin)
+![GitHub](https://img.shields.io/github/license/hlynurstef/bs-google-signin)
+![PRs Welcome](https://img.shields.io/badge/PRs-Welcome-brightgreen)
+
+</div>
 
 # Installation
 
@@ -61,3 +81,21 @@ GoogleSignin.(
      )
 );
 ```
+
+## Google Signin Button
+
+```
+<GoogleSignin.GoogleSignInButton
+  size=`Wide
+  color=`Light
+  disabled=false
+  onPress=(_ => ())
+/>
+```
+
+# Contributing
+
+1. Fork this repo and clone it onto your machine.
+2. Run `yarn install` in the root directory.
+3. Start the compiler with `yarn watch` in the root directory.
+4. Create a PR to this repo with your changes.
