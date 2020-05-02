@@ -1,0 +1,46 @@
+{
+  "folders": [
+    {
+      "path": "."
+    }
+  ],
+  "settings": {
+    /* Settings for `OCaml and Reason IDE` extension */
+    "reason.path.bsb": "./node_modules/.bin/bsb",
+    "reason.path.refmt": "./node_modules/.bin/bsrefmt",
+    "reason.diagnostics.tools": [
+      "bsb",
+      "merlin"
+    ],
+    "reason.codelens.enabled": true,
+    /* vscode settings */
+    "files.insertFinalNewline": true,
+    "editor.formatOnSave": true,
+    "files.exclude": {
+      "**/.git": true,
+      "**/.DS_Store": true,
+      "**/.git/objects/**": true,
+      "**/.git/subtree-cache/**": true,
+      "assets/**": true,
+      "**/node_modules": true,
+      "**/ios/Pods/**/*": true,
+      "**/*.bs.js": true,
+      "**/.svn": true,
+      "**/*.png": false,
+    },
+    "search.exclude": {
+      "**/node_modules": true,
+      "**/*.bs.js": true,
+      "**/*.png": false,
+    },
+    "files.watcherExclude": {
+      "**/.git/objects/**": true,
+      "**/.git/subtree-cache/**": true,
+      "assets/**": true,
+      "**/node_modules": true,
+      "**/*.bs.js": true,
+      "**/*.png": true,
+    },
+    "editor.tabSize": 2
+  }
+}

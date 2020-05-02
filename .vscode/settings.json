@@ -1,0 +1,12 @@
+{
+  "editor.renderWhitespace": "all",
+  "editor.formatOnSave": true,
+  "editor.tabSize": 2,
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[reason]": {
+    "editor.defaultFormatter": "freebroccolo.reasonml"
+  },
+  "diffEditor.ignoreTrimWhitespace": false,
+}

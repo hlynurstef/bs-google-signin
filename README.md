@@ -1,6 +1,6 @@
 <p align="center">
-  <img alt="reason-ml" src="img/reason.png" width="300">
-  <img alt="google-signin-button" src="img/google-signin-button.png" width="300">
+  <img alt="reason-ml" src="assets/reason.png" width="300">
+  <img alt="google-signin-button" src="assets/google-signin-button.png" width="300">
 </p>
 
 <h1 align="center">
@@ -16,6 +16,7 @@
 <div align="center">
 
 ![npm](https://img.shields.io/npm/v/@hlynurstef/bs-google-signin)
+![npm](https://img.shields.io/npm/dt/@hlynurstef/bs-google-signin)
 ![GitHub last commit](https://img.shields.io/github/last-commit/hlynurstef/bs-google-signin)
 ![GitHub](https://img.shields.io/github/license/hlynurstef/bs-google-signin)
 ![PRs Welcome](https://img.shields.io/badge/PRs-Welcome-brightgreen)
